@@ -1,6 +1,6 @@
 MaterialDesignColorsSwift
 ===
-->![image](Media/screenshot.png)<-
+![image](Media/screenshot.png)
 
 Or [Google Material Design Color](http://www.google.com/design/spec/style/color.html) for **Swift**
 
