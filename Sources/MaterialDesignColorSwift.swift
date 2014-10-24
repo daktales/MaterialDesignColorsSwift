@@ -8,18 +8,17 @@
 
 import Foundation
 
-#if TARGET_OS_MAC
-    import Cocoa
-    typealias Color = NSColor
-#else
+#if TARGET_OS_IPHONE
     import UIKit
     typealias Color = UIColor
+#else
+    import Cocoa
+    typealias Color = NSColor
 #endif
 
 extension Color {
     convenience init(rgba: UInt){
         let sRgba = min(rgba,0xFFFFFFFF)
-        print(sRgba)
         let red: CGFloat = CGFloat((sRgba & 0xFF000000) >> 24) / 255.0
         let green: CGFloat = CGFloat((sRgba & 0x00FF0000) >> 16) / 255.0
         let blue: CGFloat = CGFloat((sRgba & 0x0000FF00) >> 8) / 255.0
